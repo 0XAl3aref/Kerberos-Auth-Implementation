@@ -123,8 +123,12 @@ def fun():
             #? and the new session key (used for secure comm with the actual service).
             
             service_payload = {"service_ticket": service_ticket, "username": user_name}
+            
+            #? Here the service_ticket is the encrypted blob to be sent to the actual service.
+            #? That ticket that will used to create Service Session Key.
+            #? The username is also sent to the service for identification ond accountability.
+            #? The service_payload is the final payload to be sent to the actual service.
             #? Builds the payload for the target service (actual service the user wanted to access in the beginning).
-
             print('-'*40)
             print("Contacting service with payload : %s"% str(service_payload))
             service_response = requests.post("http://localhost:9090/authenticate", json=service_payload)
