@@ -46,7 +46,7 @@ The client sends a POST request to the Authentication Server containing the foll
     
     ```json
     json
-    CopyEdit
+   
     {
       "username": "user_name",
       "service_name": "desired_service",
@@ -108,7 +108,7 @@ The client sends a POST request to the TGS with the following JSON body:
     
     ```json
     json
-    CopyEdit
+    
     {
       "authenticator": "auth_data",
       "tgt": "tgt_data",
@@ -176,7 +176,7 @@ The client sends a **POST** request to the `/authenticate` endpoint with the fol
     
     ```json
     json
-    CopyEdit
+    
     {
       "service_ticket": "encrypted_service_ticket",
       "username": "client_username"
@@ -196,7 +196,7 @@ The client sends a **POST** request to the `/authenticate` endpoint with the fol
         
         ```json
         json
-        CopyEdit
+        
         {
           "status": 204,
           "payload": "Authenticated and the service and client session key is <session_key>"
@@ -208,7 +208,7 @@ The client sends a **POST** request to the `/authenticate` endpoint with the fol
         
         ```json
         json
-        CopyEdit
+        
         {
           "status": 301,
           "payload": "Unauthorized"
